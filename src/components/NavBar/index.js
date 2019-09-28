@@ -12,12 +12,13 @@ export default function Navbar() {
     
 
     useEffect(() => {
+        console.log("page")
         setMeanTreeNode(MenuConfig)
         console.log(menuTreeNode)
+        
     })
 
     const renderMenu = (data) => {
-        
         return (
             data.map((item) => {
                 if (item.children) {
@@ -41,7 +42,9 @@ export default function Navbar() {
             </div>
             <div className="menuWrap">
                 <Menu theme="dark">
-                    
+                    <SubMenu title="asd">
+                        {/* {renderMenu(menuTreeNode)} */}
+                    </SubMenu>
                 </Menu>
             </div>
         </Fragment>
