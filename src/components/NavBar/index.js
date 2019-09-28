@@ -8,28 +8,26 @@ import "./style.less"
 
 export default function Navbar() {
     const { SubMenu } = Menu;
-    const [menuTreeNode, setMeanTreeNode] = useState()
+    const [menuTreeNode, setMeanTreeNode] = useState([])
     
 
     useEffect(() => {
-        console.log("page")
         setMeanTreeNode(MenuConfig)
-        console.log(menuTreeNode)
-        
-    })
+    }, [])
 
     const renderMenu = (data) => {
+        // console.log("this is"+data)
         return (
             data.map((item) => {
                 if (item.children) {
                     return (
-                        <SubMenu title={item.children.title} key={item.key}>
+                        <SubMenu title={item.title} key={item.key}>
                             renderMenu(item.children)
                        </SubMenu>
                     )
                 }
                 return (
-                   <Menu.Item title={item.title} key={item.key}/>
+                   <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
                 )
             })
         )
@@ -43,7 +41,7 @@ export default function Navbar() {
             <div className="menuWrap">
                 <Menu theme="dark">
                     <SubMenu title="asd">
-                        {/* {renderMenu(menuTreeNode)} */}
+                        {renderMenu(menuTreeNode)}
                     </SubMenu>
                 </Menu>
             </div>
