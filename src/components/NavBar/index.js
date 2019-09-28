@@ -22,12 +22,12 @@ export default function Navbar() {
                 if (item.children) {
                     return (
                         <SubMenu title={item.title} key={item.key}>
-                            renderMenu(item.children)
+                            {renderMenu(item.children)}
                        </SubMenu>
                     )
                 }
                 return (
-                   <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
+                    <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
                 )
             })
         )
@@ -40,9 +40,7 @@ export default function Navbar() {
             </div>
             <div className="menuWrap">
                 <Menu theme="dark">
-                    <SubMenu title="asd">
                         {renderMenu(menuTreeNode)}
-                    </SubMenu>
                 </Menu>
             </div>
         </Fragment>
