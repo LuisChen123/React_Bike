@@ -1,125 +1,125 @@
 const menuList = [
     {
         title: 'Home',
-        key: '/home'
+        key: '/admin/home'
     },
     {
         title: 'UI',
-        key: '/ui',
+        key: '/admin/ui',
         children: [
             {
                 title: 'Button',
-                key: '/ui/buttons',
+                key: '/admin/ui/buttons',
             },
             {
                 title: 'Popover',
-                key: '/ui/modals',
+                key: '/admin/ui/modals',
             },
             {
                 title: 'Loading',
-                key: '/ui/loadings',
+                key: '/admin/ui/loadings',
             },
             {
                 title: 'Notification',
-                key: '/ui/notification',
+                key: '/admin/ui/notification',
             },
             {
                 title: 'Message',
-                key: '/ui/messages',
+                key: '/admin/ui/messages',
             },
             {
                 title: 'Tab',
-                key: '/ui/tabs',
+                key: '/admin/ui/tabs',
             },
             {
                 title: 'Gallery',
-                key: '/ui/gallery',
+                key: '/admin/ui/gallery',
             },
             {
                 title: 'Carousel',
-                key: '/ui/carousel',
+                key: '/admin/ui/carousel',
             }
         ]
     },
     {
         title: 'form',
-        key: '/form',
+        key: '/admin/form',
         children: [
             {
                 title: 'login',
-                key: '/form/login',
+                key: '/admin/form/login',
             },
             {
                 title: 'reg',
-                key: '/form/reg',
+                key: '/admin/form/reg',
             }
         ]
     },
     {
         title: 'table',
-        key: '/table',
+        key: '/admin/table',
         children: [
             {
                 title: 'basic table',
-                key: '/table/basic',
+                key: '/admin/table/basic',
             },
             {
                 title: 'high table',
-                key: '/table/high',
+                key: '/admin/table/high',
             }
         ]
     },
     {
         title: 'rich text',
-        key: '/rich'
+        key: '/admin/rich'
     },
     {
         title: 'city',
-        key: '/city'
+        key: '/admin/city'
     },
     {
         title: 'order',
-        key: '/order',
+        key: '/admin/order',
         btnList: [
             {
                 title: 'detail',
-                key: 'detail'
+                key: '/admin/detail'
             },
             {
                 title: 'finish',
-                key: 'finish'
+                key: '/admin/finish'
             }
         ]
     },
     {
         title: 'user',
-        key: '/user'
+        key: '/admin/user'
     },
     {
         title: 'bikeMap',
-        key: '/bikeMap'
+        key: '/admin/bikeMap'
     },
     {
         title: 'charts',
-        key: '/charts',
+        key: '/admin/charts',
         children: [
             {
                 title: 'bar',
-                key: '/charts/bar'
+                key: '/admin/charts/bar'
             },
             {
                 title: 'pie',
-                key: '/charts/pie'
+                key: '/admin/charts/pie'
             },
             {
                 title: 'line',
-                key: '/charts/line'
+                key: '/admin/charts/line'
             },
         ]
     },
     {
         title: 'permission',
-        key: '/permission'
+        key: '/admin/permission'
     },
 ];
 export default menuList;
