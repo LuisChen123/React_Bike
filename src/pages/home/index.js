@@ -9,20 +9,20 @@ import "../../style/common.less"
 export default function home() {
     return (
         <Fragment>
-            <div className="homaPage-wrap">
-                <Row>
-                    <Col span={3}>
-                        <NavBar />
-                    </Col>
-                    <Col span={21}>
-                        <Header />
-                        <Row>
-                            content
+
+            <Row className="homePage-wrap">
+                <Col span={3} className="navBar">
+                    <NavBar />
+                </Col>
+                <Col span={21} className="main">
+                    <Header />
+                    <Row className="content">
+                        content
                     </Row>
-                        <Footer />
-                    </Col>
-                </Row>
-            </div>
+                    <Footer />
+                </Col>
+            </Row>
+
         </Fragment>
     )
 }
