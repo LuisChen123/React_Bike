@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Row, Col } from 'antd';
 import "./style.less"
 import Util from '../../utils/utils'
-import jsonPForAxios from '../../axios'
+import JsonPForAxios from '../../axios'
 import axios from "axios";
 
 
@@ -12,7 +12,19 @@ export default function Header() {
     const [location, setLocation] = useState([]);
     const [weather, setWeather] = useState([]);
 
-    useEffect(() => {
+    // function jsonp() {
+    //     JsonPForAxios.jsonP({
+    //         url: 'https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22'
+    //     })
+    //         .then((res) => {
+    //             console.log(res)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err)
+    //         })
+    // }
+
+    function getUserName() {
         axios
             .get("https://jsonplaceholder.typicode.com/users")
             .then((res) => {
@@ -21,25 +33,59 @@ export default function Header() {
             .catch((error) => {
                 console.log(error)
             });
+    }
+    
+    function getWeatherData() {
+        axios
+            .get("https://api.weatherbit.io/v2.0/current", {
+                params: {
+                    method: 'get',
+                    key: '395915aa03704aacb20aeb53b39aadc8',
+                    city: 'irvine'
+                }
+            })
+            .then((res) => {
+                setLocation(res.data.data[0].city_name)
+                setWeather(res.data.data[0].weather.description)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
 
-        axios({
-            "method": "GET",
-            "url": "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
-            "headers": {
-                "content-type": "application/octet-stream",
-                "x-rapidapi-host": "us-weather-by-zip-code.p.rapidapi.com",
-                "x-rapidapi-key": "sZX6fWDfaKmsh1ZhVcaMfrOeOmlop1mo0mpjsnbrdGPcFJsrJ0"
-            }, "params": {
-                "zip": "92620"
-            }
-        })
-            .then((response) => {
-                setLocation(response.data.City)
-                setWeather(response.data.Weather)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
+
+    useEffect(() => {
+        getUserName();
+        getWeatherData();
+       
+        // axios
+        //     .get("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22")
+        //     .then((res) => {
+        //         setUser(res.data)
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     });
+
+        // jsonp()
+        // axios({
+        //     "method": "GET",
+        //     "url": "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
+        //     "headers": {
+        //         "content-type": "application/octet-stream",
+        //         "x-rapidapi-host": "us-weather-by-zip-code.p.rapidapi.com",
+        //         "x-rapidapi-key": "sZX6fWDfaKmsh1ZhVcaMfrOeOmlop1mo0mpjsnbrdGPcFJsrJ0"
+        //     }, "params": {
+        //         "zip": "92620"
+        //     }
+        // })
+        //     .then((response) => {
+        //         setLocation(response.data.City)
+        //         setWeather(response.data.Weather)
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
 
         setInterval(() => {
             setSystime(Util.formatDate(new Date().getTime()))

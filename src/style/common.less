@@ -1,14 +1,15 @@
-
+@import './default.less';
 .homePage-wrap{
+    position: relative;
     .navBar{
         height: calc(100vh);
-        background-color: #001529;
+        background-color: @colorR;
     }
     .main{
+        background-color: @colorD;
         height: calc(100vh);
-        overflow: hidden;
     }
-    .content{
-        position: relative;
+    .content{        
+         background-color: white;
     }
 }

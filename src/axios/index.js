@@ -3,7 +3,7 @@ import JsonP from 'jsonp'
 export default class JsonPForAxios{
     static jsonP(options){
        return new Promise((resolve,reject)=>{
-            JsonP(options.url,{
+           JsonP(options.url,{
                 param:'callback'
             },function(err,response) {
                     if (response.status ==='success') {
