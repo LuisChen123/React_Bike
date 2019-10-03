@@ -2,11 +2,11 @@ import React ,{ Fragment ,useEffect, useState, Component}from 'react';
 import './index.less';
 
 
-export default function Button() {
+export default function modals() {
     return(
         <Fragment>
-            <div className="Button-wrap">
-                this is Button page
+            <div className="modals-wrap">
+                this is modals page
             </div>
         </Fragment>
     )
