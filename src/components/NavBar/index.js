@@ -26,10 +26,10 @@ export default function Navbar() {
                 }
                 return (
                     <Menu.Item title={item.title} key={item.key}>
-                        <Link to ={item.key} >
+                         <Link to ={item.key} >
                             {item.title}
-                        </Link>
-                        
+                        </Link> 
+                                                
                     </Menu.Item>
                 )
             })
