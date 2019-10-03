@@ -1,10 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import MenuConfig from '../../config/menuConfig';
 import { Menu, Icon } from 'antd';
-import "./style.less"
-
-
-
+import "./style.less";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const { SubMenu } = Menu;
@@ -27,7 +25,12 @@ export default function Navbar() {
                     )
                 }
                 return (
-                    <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
+                    <Menu.Item title={item.title} key={item.key}>
+                        <Link to ={item.key} >
+                            {item.title}
+                        </Link>
+                        
+                    </Menu.Item>
                 )
             })
         )
