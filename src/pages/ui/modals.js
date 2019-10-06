@@ -1,5 +1,4 @@
 import React ,{ Fragment ,useEffect, useState, Component}from 'react';
-import './index.less';
 
 
 export default function modals() {
