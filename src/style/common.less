@@ -1,5 +1,6 @@
 @import './default.less';
 .homePage-wrap{
+
     .navBar{
         height: calc(100vh);
         background-color: @colorR;
@@ -7,10 +8,11 @@
     }
     .main{
         background-color: @colorD;
-        height: calc(100vh);
+        min-height: calc(100vh);
         overflow: auto;
          .content {
-             background-color: black;
+             min-height: calc(75vh);
+             background-color: @colorD;
              margin: 20px;
          }
     }

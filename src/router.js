@@ -4,8 +4,9 @@ import App from './App';
 import Login from './pages/login';
 import Home from './pages/home';
 import Admin from './admin';
-import Button from './pages/ui/buttons.js';
-import Modals from './pages/ui/modals.js';
+import Button from './pages/ui/buttons';
+import Modals from './pages/ui/modals';
+import Loading from './pages/ui/loading'
 import NoMatch from './pages/noMatch';
 
 export default function IRouter() {
@@ -21,6 +22,7 @@ export default function IRouter() {
                                 <Route  path="/home" component={Home} />
                                 <Route  path="/ui/buttons" component={Button} />
                                 <Route  path="/ui/modals" component={Modals} />
+                                <Route path="/ui/loadings" component={Loading} />
                                 <Route  component={NoMatch} />
                             </Switch>
                           
