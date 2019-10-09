@@ -7,6 +7,11 @@ import Admin from './admin';
 import Button from './pages/ui/buttons';
 import Modals from './pages/ui/modals';
 import Loading from './pages/ui/loading'
+import Notices from './pages/ui/notices';
+import Message from './pages/ui/message';
+import Tabs from './pages/ui/tabs';
+import Gallery from './pages/ui/gallery';
+import Carousel from './pages/ui/carousel'
 import NoMatch from './pages/noMatch';
 
 export default function IRouter() {
@@ -23,6 +28,11 @@ export default function IRouter() {
                                 <Route  path="/ui/buttons" component={Button} />
                                 <Route  path="/ui/modals" component={Modals} />
                                 <Route path="/ui/loadings" component={Loading} />
+                                <Route path="/ui/notification" component={Notices} />
+                                <Route path="/ui/messages" component={Message} />
+                                <Route path="/ui/tabs" component={Tabs} />
+                                <Route path="/ui/gallery" component={Gallery} />
+                                <Route path="/ui/carousel" component={Carousel} />
                                 <Route  component={NoMatch} />
                             </Switch>
                           
