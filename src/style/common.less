@@ -1,8 +1,8 @@
 @import './default.less';
 .homePage-wrap{
-
+    background-color:@colorR;
     .navBar{
-        height: calc(100vh);
+        height: auto;
         background-color: @colorR;
         color: #fff;
     }
@@ -10,11 +10,12 @@
         background-color: @colorD;
         min-height: calc(100vh);
         overflow: auto;
+        display: flex;
+        flex-direction: column;
          .content {
-             min-height: calc(75vh);
+             min-height: calc(100vh);
              background-color: @colorD;
              margin: 20px;
          }
     }
-   
 }

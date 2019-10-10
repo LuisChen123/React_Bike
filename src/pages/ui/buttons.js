@@ -47,7 +47,65 @@ export default function Buttons() {
                     <Button type="primary" size={size}>Comfirm</Button>
                     <Button type="dash" size={size}>hello</Button>
                 </Card>
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
 
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
+
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
+
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
+
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
+
+                <Card title="Sized Icons" >
+                    <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
+                        <Radio value="small">Large</Radio>
+                        <Radio value="default">Default</Radio>
+                        <Radio value="large">Small</Radio>
+                    </Radio.Group>
+                    <Button type="primary" size={size}>Comfirm</Button>
+                    <Button type="dash" size={size}>hello</Button>
+                </Card>
             </div>
         </Fragment>
     )
