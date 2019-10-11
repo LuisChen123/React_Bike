@@ -18,15 +18,15 @@ export default function IRouter() {
     return (
         <HashRouter>
             <Switch>
+                <Route path="/" component={Login} />
                 <App>
-                    <Route path="/login" component={Login} />
                     <Route path="/" render={() =>
                         <Admin>
                             {/* <Route path="/ui/button" component={Login} /> */}
-                            <Switch>
-                                <Route  path="/home" component={Home} />
-                                <Route  path="/ui/buttons" component={Button} />
-                                <Route  path="/ui/modals" component={Modals} />
+                            <Switch>   
+                                <Route path="/home" component={Home} />
+                                <Route path="/ui/buttons" component={Button} />
+                                <Route path="/ui/modals" component={Modals} />
                                 <Route path="/ui/loadings" component={Loading} />
                                 <Route path="/ui/notification" component={Notices} />
                                 <Route path="/ui/messages" component={Message} />
@@ -34,12 +34,9 @@ export default function IRouter() {
                                 <Route path="/ui/gallery" component={Gallery} />
                                 <Route path="/ui/carousel" component={Carousel} />
                                 <Route  component={NoMatch} />
-                            </Switch>
-                          
+                            </Switch>  
                         </Admin>
-
                     } />
-
                     <Route path="/order/detial" component={Button} />
                 </App>
             </Switch>
