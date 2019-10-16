@@ -12,6 +12,7 @@ import Message from './pages/ui/message';
 import Tabs from './pages/ui/tabs';
 import Gallery from './pages/ui/gallery';
 import Carousel from './pages/ui/carousel'
+import RegPage from './pages/reg';
 import NoMatch from './pages/noMatch';
 
 export default function IRouter() {
@@ -23,7 +24,8 @@ export default function IRouter() {
                     <Route path="/" render={() =>
                         <Admin>
                             {/* <Route path="/ui/button" component={Login} /> */}
-                            <Switch>   
+                            <Switch>
+                                <Route path="/regPage" component={RegPage} />
                                 <Route path="/home" component={Home} />
                                 <Route path="/ui/buttons" component={Button} />
                                 <Route path="/ui/modals" component={Modals} />
