@@ -19,12 +19,13 @@ export default function IRouter() {
     return (
         <HashRouter>
             <Switch>
-                <Route path="/" component={Login} />
+                
                 <App>
                     <Route path="/" render={() =>
                         <Admin>
                             {/* <Route path="/ui/button" component={Login} /> */}
                             <Switch>
+                                <Route path="/login" component={Login} />
                                 <Route path="/regPage" component={RegPage} />
                                 <Route path="/home" component={Home} />
                                 <Route path="/ui/buttons" component={Button} />
