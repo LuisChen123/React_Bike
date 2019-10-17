@@ -94,7 +94,7 @@ function Register(props) {
         e.preventDefault();
         props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                console.log('Received values of form: ',JSON.stringify(values));
                 message.success("success regsiter")
             }else{
                 message.error('regsiter no success')
@@ -239,7 +239,7 @@ function Register(props) {
                                 })(
                                     <TextArea
                                         autoSize={
-                                            { DIYSize }
+                                             DIYSize 
                                         }
                                     />
                                 )
@@ -292,7 +292,7 @@ function Register(props) {
                         </FormItem>
                         <FormItem  {...offsetLayout}>
                             <Button type="primary" onClick={handleReg}>Regsiter</Button>
-                            <Link to="/login" alt="" style={{ marginLeft: "20px" }}>sign up</Link>
+                            <Link to="/form/login" alt="" style={{ marginLeft: "20px" }}>sign up</Link>
                         </FormItem>
                     </Form>
                 </Card>

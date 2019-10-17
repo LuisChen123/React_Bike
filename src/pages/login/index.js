@@ -75,7 +75,7 @@ function Login(props) {
                         </FormItem>
                         <FormItem>
                             <Button type="primary" onClick={handleSubmit}>Log in</Button>
-                            <Link to="/regPage" alt="" style={{ float: "right" }}>Sign up Now!</Link>
+                            <Link to="/form/reg" alt="" style={{ float: "right" }}>Sign up Now!</Link>
                         </FormItem>
 
                     </Form>

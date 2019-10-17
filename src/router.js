@@ -13,29 +13,31 @@ import Tabs from './pages/ui/tabs';
 import Gallery from './pages/ui/gallery';
 import Carousel from './pages/ui/carousel'
 import RegPage from './pages/reg';
+import BaseTable from './pages/basicTable';
 import NoMatch from './pages/noMatch';
 
 export default function IRouter() {
     return (
         <HashRouter>
             <Switch>
-                
                 <App>
-                    <Route path="/" render={() =>
+                    <Route path="/login" component={Login} />
+                    <Route path="/admin" render={() =>
                         <Admin>
                             {/* <Route path="/ui/button" component={Login} /> */}
                             <Switch>
-                                <Route path="/login" component={Login} />
-                                <Route path="/regPage" component={RegPage} />
-                                <Route path="/home" component={Home} />
-                                <Route path="/ui/buttons" component={Button} />
-                                <Route path="/ui/modals" component={Modals} />
-                                <Route path="/ui/loadings" component={Loading} />
-                                <Route path="/ui/notification" component={Notices} />
-                                <Route path="/ui/messages" component={Message} />
-                                <Route path="/ui/tabs" component={Tabs} />
-                                <Route path="/ui/gallery" component={Gallery} />
-                                <Route path="/ui/carousel" component={Carousel} />
+                               
+                                <Route path="/admin/home" component={Home} />
+                                <Route path="/admin/ui/buttons" component={Button} />
+                                <Route path="/admin/ui/modals" component={Modals} />
+                                <Route path="/admin/ui/loadings" component={Loading} />
+                                <Route path="/admin/ui/notification" component={Notices} />
+                                <Route path="/admin/ui/messages" component={Message} />
+                                <Route path="/admin/ui/tabs" component={Tabs} />
+                                <Route path="/admin/ui/gallery" component={Gallery} />
+                                <Route path="/admin/ui/carousel" component={Carousel} />
+                                <Route path="/admin/form/reg" component={RegPage} />
+                                <Route path="/admin/table/basic" component={BaseTable} />
                                 <Route  component={NoMatch} />
                             </Switch>  
                         </Admin>
