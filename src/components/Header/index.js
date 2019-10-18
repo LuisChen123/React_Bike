@@ -57,35 +57,6 @@ export default function Header() {
     useEffect(() => {
         getUserName();
         getWeatherData();
-       
-        // axios
-        //     .get("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22")
-        //     .then((res) => {
-        //         setUser(res.data)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     });
-
-        // jsonp()
-        // axios({
-        //     "method": "GET",
-        //     "url": "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
-        //     "headers": {
-        //         "content-type": "application/octet-stream",
-        //         "x-rapidapi-host": "us-weather-by-zip-code.p.rapidapi.com",
-        //         "x-rapidapi-key": "sZX6fWDfaKmsh1ZhVcaMfrOeOmlop1mo0mpjsnbrdGPcFJsrJ0"
-        //     }, "params": {
-        //         "zip": "92620"
-        //     }
-        // })
-        //     .then((response) => {
-        //         setLocation(response.data.City)
-        //         setWeather(response.data.Weather)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     })
 
         setInterval(() => {
             setSystime(Util.formatDate(new Date().getTime()))
