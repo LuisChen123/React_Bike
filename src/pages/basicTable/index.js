@@ -7,7 +7,6 @@ import axios from '../../axios/index'
 function TableComponent() {
     const [dataSource ,setDataSource] = useState([]);
     const [dataSource2, setDataSource2] = useState([]);
-    const [url, setUrl] = useState('https://jsonplaceholder.typicode.com/users')
     const columns1 = [
         {
             title: 'Id',
@@ -88,10 +87,11 @@ function TableComponent() {
             key: 'companyName'
         },
     ]
+    const rowSelection = {
+        type:'radio',
+
+    }
    
-
-
-
     useEffect(() => {
         const dataSource = [
             {
@@ -162,15 +162,19 @@ function TableComponent() {
         //     }
         // }
         // fenchData();
+
+
         axios.ajax({
             url:'/users',
             data:{
                 parm:{
                     page:1
-                }
+                },
+            // isShowLoading:false   // add this line if we  dont want loading modal showing up this request
             }
         }).then((res)=>{
             if (res.status === 200){
+                console.log(res.data)
                 setDataSource2(res.data)
             }
         })
@@ -184,8 +188,17 @@ function TableComponent() {
                     pagination={false}
                 />
             </Card>
-            <Card title="Advance table">
+            <Card title="Advance render table">
                 <Table
+                    columns={columns2}
+                    dataSource={dataSource2}
+                    pagination={false}
+                />
+            </Card>
+            <Card title="button table">
+                <Table
+                bordered
+                rowSelection={rowSelection}
                     columns={columns2}
                     dataSource={dataSource2}
                     pagination={false}

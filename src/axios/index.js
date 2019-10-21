@@ -18,8 +18,13 @@ export default class JsonPForAxios{
     }
 
     static ajax(options){
+        let loading;
+        if (options.data && options.data.isShowLoading !== false){
+            loading= document.getElementById('ajaxLoading');
+            loading.style.display = 'block';
+        }
+
         let baseApi = 'https://jsonplaceholder.typicode.com'
-        
         return new Promise((resolve,reject)=>{
             axios({
                 url:options.url,
@@ -28,6 +33,10 @@ export default class JsonPForAxios{
                 timeout:5000,
                 params:(options.data && options.data.params) || ''   
             }).then((res)=>{
+                if(options.data && options.data.isShowLoading !== false){
+                    loading = document.getElementById('ajaxLoading');
+                    loading.style.display = 'none';
+                }
                 if(res.status === 200){
                     resolve(res)
                 }else{

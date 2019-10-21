@@ -26,7 +26,6 @@ export default function IRouter() {
                         <Admin>
                             {/* <Route path="/ui/button" component={Login} /> */}
                             <Switch>
-                               
                                 <Route path="/admin/home" component={Home} />
                                 <Route path="/admin/ui/buttons" component={Button} />
                                 <Route path="/admin/ui/modals" component={Modals} />
